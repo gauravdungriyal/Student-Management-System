@@ -56,13 +56,15 @@ public class Main {
             System.out.println("Enter your choice");
             Scanner sc=new Scanner(System.in);
             int choice=sc.nextInt();
-            System.out.println("Enter admin name");
-            String adminName=sc.next();
-            System.out.println("Enter admin password");
-            String adminPassword=sc.next();
-            if(!Objects.equals(adminName, admin.getUserName()) || !Objects.equals(adminPassword, admin.getPassword())){
-                System.out.println("Wrong credentials");
-                return;
+            if(choice!=2 && choice!=5){
+                System.out.println("Enter admin name");
+                String adminName=sc.next();
+                System.out.println("Enter admin password");
+                String adminPassword=sc.next();
+                if(!Objects.equals(adminName, admin.getUserName()) || !Objects.equals(adminPassword, admin.getPassword())){
+                    System.out.println("Wrong credentials");
+                    return;
+                }
             }
             switch (choice){
                 case 1:
